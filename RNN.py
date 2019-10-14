@@ -12,7 +12,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
 # Importing the training set
-inputdata = pd.read_csv("C:/Ram Folders/Python/Data/RAM py projects/Stock-Price-Prediction-using-RNN/Google_Stock_Price_Train.csv")
+inputdata = pd.read_csv("Google_Stock_Price_Train.csv")
 
 trainingset = inputdata.iloc[:,1:2].values
 
@@ -76,7 +76,7 @@ regressor.fit(X_train, y_train, epochs = 100, batch_size = 32)
 # Part 3 - Making the predictions and visualising the results
 
 # Getting the real stock price of 2017
-dataset_test = pd.read_csv('C:/Ram Folders/Python/Data/RAM py projects/Stock-Price-Prediction-using-RNN/Google_Stock_Price_Test.csv')
+dataset_test = pd.read_csv('Google_Stock_Price_Test.csv')
 real_stock_price = dataset_test.iloc[:, 1:2].values
 
 # Getting the predicted stock price of 2017
